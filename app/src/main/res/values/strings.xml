@@ -1,3 +1,19 @@
 <resources>
     <string name="app_name">Login 202102314 Ade Marfa</string>
+    <string-array name="jenisKelaminArray">
+        <item>Laki Laki</item>
+        <item>Perempuan</item>
+    </string-array>
+
+    <string-array name="statusPernikahanArray">
+        <item>Belum Menikah</item>
+        <item>Menikah</item>]
+        <item>Duda</item>
+        <item>Janda</item>
+    </string-array>
+
+    <string-array name="jpArray">
+        <item>SI/SI</item>
+        <item>TI/TI</item>
+    </string-array>
 </resources>
