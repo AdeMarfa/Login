@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="idEditText" type="id" />
+    <item name="addButton" type="id" />
+    <item name="tampilMahasiswaButton" type="id" />
+</resources>
