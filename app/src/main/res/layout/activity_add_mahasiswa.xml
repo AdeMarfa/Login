@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".TambahMahasiswaActivity"
-    android:background="@drawable/gradient_a">
+    android:background="@drawable/gradient_a"
+    tools:context="com.ademarfamiftahulhidayah202102314.login.AddMahasiswaActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -15,134 +14,132 @@
         android:padding="10dp">
 
         <TextView
+            style="@style/textView1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="10dp"
             android:text="Mahasiswa Baru"
             android:textSize="25sp"
-            android:textStyle="bold"
-            style="@style/textView1" />
+            android:textStyle="bold" />
 
         <TextView
+            style="@style/textView1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="NIM"
-            style="@style/textView1"/>
+            android:text="NIM" />
 
         <EditText
             android:id="@+id/nimEditText"
+            style="@style/editText1"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            style="@style/editText1"/>
+            android:layout_height="wrap_content" />
 
         <TextView
+            style="@style/textView1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Nama"
-            style="@style/textView1" />
+            android:text="Nama" />
 
         <EditText
             android:id="@+id/namaEditText"
+            style="@style/editText1"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            style="@style/editText1"/>
+            android:layout_height="wrap_content" />
 
         <TextView
+            style="@style/textView1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Jenis Kelamin"
-            style="@style/textView1" />
+            android:text="Jenis Kelamin" />
 
         <Spinner
             android:id="@+id/jenisKelaminSpinner"
+            style="@style/spinner1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:entries="@array/jenisKelaminArray"
-            style="@style/spinner1"/>
+            android:entries="@array/jenisKelaminArray" />
 
         <TextView
+            style="@style/textView1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Tempat Lahir"
-            style="@style/textView1" />
+            android:text="Tempat Lahir" />
 
         <EditText
             android:id="@+id/tempatLahirEditText"
+            style="@style/editText1"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:minHeight="48dp"
-            style="@style/editText1"/>
+            android:layout_height="wrap_content" />
 
         <TextView
+            style="@style/textView1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Tanggal Lahir (yyyy-mm-dd)"
-            style="@style/textView1"/>
+            android:text="Tanggal Lahir (yyyy-mm-dd)" />
 
         <EditText
             android:id="@+id/tanggalLahirEditText"
+            style="@style/editText1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="date"
-            style="@style/editText1"/>
+            android:inputType="date" />
 
         <TextView
+            style="@style/textView1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Alamat"
-            style="@style/textView1" />
+            android:text="Alamat" />
 
         <EditText
             android:id="@+id/alamatEditText"
+            style="@style/editText1"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            style="@style/editText1" />
+            android:layout_height="wrap_content" />
 
         <TextView
+            style="@style/textView1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Jurusan / Prodi"
-            style="@style/textView1" />
+            android:text="Jurusan/ Prodi" />
 
         <Spinner
             android:id="@+id/jpSpinner"
+            style="@style/spinner1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:entries="@array/jpArray"
-            style="@style/spinner1"/>
+            android:entries="@array/jpArray" />
 
         <TextView
+            style="@style/textView1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Status Pernikahan"
-            style="@style/textView1"/>
+            android:text="Status Pernikahan" />
 
         <Spinner
-            android:id="@+id/statusPernikahanSpinner"
+            android:id="@+id/statusNikahSpinner"
+            style="@style/spinner1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:entries="@array/statusPernikahanArray"
-            style="@style/spinner1"/>
+            android:entries="@array/statusPernikahanArray" />
 
         <TextView
+            style="@style/textView1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Tahun Masuk"
-            style="@style/textView1" />
+            android:text="Tahun Masuk" />
 
         <EditText
             android:id="@+id/tahunMasukEditText"
+            style="@style/editText1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="number"
-            style="@style/editText1" />
+            android:inputType="number" />
 
         <Button
             android:id="@+id/saveButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Simpan"
-            style="@+id/saveButton"/>
-
+            android:text="Simpan" />
     </LinearLayout>
+
 </ScrollView>

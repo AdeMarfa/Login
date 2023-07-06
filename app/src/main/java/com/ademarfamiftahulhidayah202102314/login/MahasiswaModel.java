@@ -1,11 +1,9 @@
 package com.ademarfamiftahulhidayah202102314.login;
 
-public class MahasiswaModel
-{
+public class MahasiswaModel {
     private String NIM, Nama, JenisKelamin, JP;
 
     public MahasiswaModel() {
-
     }
 
     public String getNIM() {

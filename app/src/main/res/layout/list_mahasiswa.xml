@@ -1,76 +1,67 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:elevation="3dp"
-    app:cardCornerRadius="5dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     app:cardUseCompatPadding="true"
+    app:cardCornerRadius="5dp"
+    app:cardElevation="3dp"
     app:contentPadding="10dp">
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
-
         <ImageView
-            android:id="@+id/jkImageView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:src="@drawable/boy"
             android:layout_marginRight="10dp"
-            android:src="@drawable/boy" />
-
+            android:id="@+id/jkimageview"/>
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:orientation="vertical">
-
             <TextView
-                android:id="@+id/namaTextView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Nama"
+                android:textStyle="bold"
                 android:textSize="20sp"
-                android:textStyle="bold" />
-
+                android:id="@+id/namatextview"/>
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginRight="10dp"
-                android:orientation="horizontal">
-
+                android:orientation="horizontal"
+                android:layout_marginRight="10dp">
                 <TextView
-                    android:id="@+id/nimTextView"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="NIM" />
-
+                    android:text="NIM"
+                    android:id="@+id/nimtextview"/>
                 <TextView
-                    android:id="@+id/jkTextView"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Jenis Kelamin" />
+                    android:text="Jenis Kelamin"
+                    android:id="@+id/jktextview"/>
             </LinearLayout>
         </LinearLayout>
-
         <androidx.cardview.widget.CardView
             android:layout_width="50dp"
             android:layout_height="50dp"
             app:cardCornerRadius="5dp"
-            app:cardElevation="3dp">
-
+            android:elevation="3dp">
             <TextView
-                android:id="@+id/jpTextView"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:background="#0000ff"
-                android:gravity="center"
                 android:text="TI"
+                android:gravity="center"
                 android:textColor="#ffffff"
                 android:textSize="25sp"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                android:id="@+id/jptextview"/>
         </androidx.cardview.widget.CardView>
     </LinearLayout>
 

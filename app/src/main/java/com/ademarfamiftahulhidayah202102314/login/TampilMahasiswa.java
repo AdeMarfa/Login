@@ -1,13 +1,13 @@
 package com.ademarfamiftahulhidayah202102314.login;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.gson.Gson;
@@ -19,23 +19,22 @@ import java.util.List;
 
 import cz.msebera.android.httpclient.Header;
 
-public class TampilMahasiswaActivity extends AppCompatActivity {
-    private FloatingActionButton _addButton;
+public class TampilMahasiswa extends AppCompatActivity {
+
     private RecyclerView _recyclerView1;
+    private FloatingActionButton _addButton;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState)
-    {
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_tampil_mahasiswa);
+        setContentView(R.layout.tampilmahasiswa);
 
-        _recyclerView1 = (RecyclerView) findViewById(R.id.recyclerView1);
-
-
+        _recyclerView1 = findViewById(R.id.recyclerView1);
 
         initAddButton();
         loadRecyclerView();
     }
+
     private void loadRecyclerView() {
         AsyncHttpClient ahc = new AsyncHttpClient();
         String url = "https://stmikpontianak.net/011100862/tampilMahasiswa.php";
@@ -46,11 +45,12 @@ public class TampilMahasiswaActivity extends AppCompatActivity {
                 Gson g = new Gson();
                 List<MahasiswaModel> mahasiswaModelList = g.fromJson(new String(responseBody), new TypeToken<List<MahasiswaModel>>() {
                 }.getType());
+//                List<MahasiswaModel> mahasiswaModelList = new Gson().fromJson(new String(responseBody), new TypeToken<List<MahasiswaModel>>(){}.getType());
 
-                RecyclerView.LayoutManager lm = new LinearLayoutManager(TampilMahasiswaActivity.this);
+                RecyclerView.LayoutManager lm = new LinearLayoutManager(TampilMahasiswa.this);
                 _recyclerView1.setLayoutManager(lm);
 
-                MahasiswaAdapter ma = new MahasiswaAdapter(TampilMahasiswaActivity.this, mahasiswaModelList);
+                MahasiswaAdapter ma = new MahasiswaAdapter(mahasiswaModelList);
                 _recyclerView1.setAdapter(ma);
             }
 
@@ -60,13 +60,14 @@ public class TampilMahasiswaActivity extends AppCompatActivity {
             }
         });
     }
+
     private void initAddButton() {
         _addButton = findViewById(R.id.addButton);
 
         _addButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(), TambahMahasiswaActivity.class);
+                Intent intent = new Intent(getApplicationContext(), AddMahasiswaActivity.class);
                 startActivity(intent);
 
                 loadRecyclerView();

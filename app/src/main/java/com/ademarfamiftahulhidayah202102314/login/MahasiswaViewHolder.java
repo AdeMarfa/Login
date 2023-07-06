@@ -7,23 +7,19 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-public class MahasiswaViewHolder extends RecyclerView.ViewHolder
-{
-    public ImageView _jkImageView;
-    public TextView _jkTextView;
-    public TextView _jpTextView;
-    public TextView _namaTextView;
-    public TextView _nimTextView;
-
-    public MahasiswaViewHolder(@NonNull View itemView)
-    {
+public class MahasiswaViewHolder extends RecyclerView.ViewHolder {
+    public ImageView _jkimageview;
+    public TextView _jktextview;
+    public TextView _jptextview;
+    public TextView _namatextview;
+    public TextView _nimtextview;
+    public MahasiswaViewHolder(@NonNull View itemView) {
         super(itemView);
 
-        _jkImageView = (ImageView) itemView.findViewById(R.id.jkImageView);
-        _jkTextView = (TextView) itemView.findViewById(R.id.jkTextView);
-        _jpTextView = (TextView) itemView.findViewById(R.id.jpTextView);
-        _namaTextView = (TextView) itemView.findViewById(R.id.namaTextView);
-        _nimTextView = (TextView) itemView.findViewById(R.id.nimTextView);
+        _jkimageview = itemView.findViewById(R.id.jkimageview);
+        _jktextview = itemView.findViewById(R.id.jktextview);
+        _jptextview = itemView.findViewById(R.id.jptextview);
+        _namatextview = itemView.findViewById(R.id.namatextview);
+        _nimtextview = itemView.findViewById(R.id.nimtextview);
     }
-
 }
