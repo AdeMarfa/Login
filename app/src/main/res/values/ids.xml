@@ -2,5 +2,6 @@
 <resources>
     <item name="idEditText" type="id" />
     <item name="addButton" type="id" />
-    <item name="tampilMahasiswaButton" type="id" />
+    <item name="BtnMahasiswa" type="id" />
+    <item name="ForexBtn" type="id" />
 </resources>
