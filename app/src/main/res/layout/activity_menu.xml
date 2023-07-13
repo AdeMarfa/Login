@@ -34,7 +34,7 @@
         android:layout_height="wrap_content"
         android:layout_columnWeight="1"
         android:background="@android:color/transparent"
-        android:drawableRight="@drawable/img_dollar_128"
+        android:drawableRight="@drawable/img_weather_lightning_128"
         android:text="Cuaca"
         android:textColor="#fff" />
 
