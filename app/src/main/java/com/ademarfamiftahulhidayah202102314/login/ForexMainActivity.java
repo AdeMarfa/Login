@@ -8,8 +8,6 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
-import com.ademarfamiftahulhidayah202102314.login.R;
-
 import com.google.gson.Gson;
 import com.loopj.android.http.AsyncHttpClient;
 import com.loopj.android.http.AsyncHttpResponseHandler;
@@ -26,7 +24,7 @@ public class ForexMainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_forex_main);
+        setContentView(R.layout.activity_main_forex);
 
         swipeRefreshLayout1 = findViewById(R.id.swipeRefreshLayout1);
         audTextView = findViewById(R.id.audTextView);
@@ -55,8 +53,8 @@ public class ForexMainActivity extends AppCompatActivity {
             @Override
             public void onSuccess(int statusCode, Header[] headers, byte[] responseBody) {
                 Gson gson = new Gson();
-                ForexRootModel rootModel = gson.fromJson(new String(responseBody), ForexRootModel.class);
-                ForexRatesModel ratesModel = rootModel.getRatesModel();
+                RootModel rootModel = gson.fromJson(new String(responseBody), RootModel.class);
+                RatesModel ratesModel = rootModel.getRatesModel();
 
                 double aud = ratesModel.getIDR() / ratesModel.getAUD();
                 double bnd = ratesModel.getIDR() / ratesModel.getBND();

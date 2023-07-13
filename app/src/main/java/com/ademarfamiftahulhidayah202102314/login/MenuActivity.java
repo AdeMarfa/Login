@@ -19,6 +19,7 @@ public class MenuActivity extends AppCompatActivity {
 
         initBtnMahasiswa();
         initBtnForex();
+        initBtnCuaca();
     }
 
     private void initBtnMahasiswa() {
@@ -33,11 +34,21 @@ public class MenuActivity extends AppCompatActivity {
     }
 
     private void initBtnForex() {
-        _addButtonForex = findViewById(R.id.ForexBtn);
+        _addButtonForex = findViewById(R.id.btnForex);
         _addButtonForex.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(), ForexMainActivity.class);
+                startActivity(intent);
+            }
+        });
+    }
+    private void initBtnCuaca() {
+        _addButtonForex = findViewById(R.id.btnCuaca);
+        _addButtonForex.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), CuacaMainActivity.class);
                 startActivity(intent);
             }
         });

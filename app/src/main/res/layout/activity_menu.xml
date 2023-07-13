@@ -9,12 +9,13 @@
     tools:context="com.ademarfamiftahulhidayah202102314.login.MenuActivity">
 
     <Button
+        android:id="@+id/btnForex"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_columnWeight="1"
         android:background="@android:color/transparent"
-        android:drawableRight="@drawable/img_teenagers_128"
-        android:text="Master Pemakai"
+        android:drawableRight="@drawable/img_dollar_128"
+        android:text="Forex"
         android:textColor="#fff" />
 
     <Button
@@ -27,5 +28,14 @@
         android:text="Master Mahasiswa"
         android:textColor="#fff" />
 
+    <Button
+        android:id="@+id/btnCuaca"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_columnWeight="1"
+        android:background="@android:color/transparent"
+        android:drawableRight="@drawable/img_dollar_128"
+        android:text="Cuaca"
+        android:textColor="#fff" />
 
 </GridLayout>
